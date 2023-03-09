@@ -71,16 +71,16 @@
       
       
       <label for="creditC">Insert card number</label>
-      <input type="tel" id="creditC" inputmode="numeric" pattern="[0-9]{16}" required>
+      <input type="tel" id="creditC" inputmode="numeric" placeholder="1234 1234 1234 1234" pattern="[0-9]{16}" required>
 
       <label for="CVC">Insert your CVC</label>
-      <input type="password" name="CVC" id="CVC" inputmode="numeric" pattern="[0-9]{3}" required> 
+      <input type="password" name="CVC" id="CVC" inputmode="numeric" placeholder="123" pattern="[0-9]{3}" required> 
 
       <label for="expDate">Insert expiration date</label>
       <input type="date" name="expDate" id="expDate" required>
 
       <label for="billingAdress">Billing adress</label>
-      <input type="email" id="billingAdress" name="billingAdress" placeholder="nomecognome@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+      <input type="text" id="billingAdress" placeholder="Via Roma 15" name="billingAdress" required>
 
       <button type="submit">Submit</button>
     </form>
