@@ -28,10 +28,10 @@
 
   <body>
     <h1>Registration form</h1>
-    <form action="/action_page.pgp">
+    <form action="#">
 
       <label for="email">Email</label>
-      <input type="text" placeholder="Enter email" id="email" required>
+      <input type="email" id="email" name="email" placeholder="nomecognome@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
 
       <label for="password">Password</label>
       <input type="password" placeholder="Enter password" minlength="6" maxlength="14" id="password" required>
@@ -59,9 +59,11 @@
         <label for="plans">Choose your plan</label>
         <select name="plans" id="plans">
            <option value="free">free</option>
-           <option value="15$">basic= 15$</option>
-           <option value="30$">medium= 30$</option>
-           <option value="55$">high= 55$</option>
+           <optgroup label="Paid plans">
+            <option value="15$">basic= 15$</option>
+            <option value="30$">medium= 30$</option>
+            <option value="55$">high= 55$</option>
+          </optgroup>
         </select> 
         <label for="pro">Pro plan +15$</label>
         <input type="checkbox" id="pro" requaired>
@@ -78,8 +80,9 @@
       <input type="date" name="expDate" id="expDate" required>
 
       <label for="billingAdress">Billing adress</label>
-      <input type="email" id="billingAdress" name="billingAdress" placeholder="nomeconome@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-    
+      <input type="email" id="billingAdress" name="billingAdress" placeholder="nomecognome@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>
