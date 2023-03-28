@@ -1,0 +1,31 @@
+.container {
+  color: green;
+  border: 1px solid red;
+  text-align: center;
+}
+.container h1 {
+  text-decoration: underline 2px blue;
+}
+.container .main {
+  display: flex;
+  padding: 10px;
+}
+.container .main article:nth-child(odd) {
+  color: blue;
+  border: 1px solid green;
+  text-align: center;
+}
+.container .main article:nth-child(even) {
+  color: red;
+  border: 1px solid green;
+  text-align: center;
+}
+.container .footer {
+  color: green;
+  border: 1px solid blue;
+  margin: 10px;
+  padding: 10px;
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */
