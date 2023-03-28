@@ -1,6 +1,7 @@
 .container {
   color: green;
   border: 1px solid red;
+  font-size: 1rem;
   text-align: center;
 }
 .container h1 {
@@ -13,19 +14,21 @@
 .container .main article:nth-child(odd) {
   color: blue;
   border: 1px solid green;
+  font-size: 1rem;
   text-align: center;
 }
 .container .main article:nth-child(even) {
   color: red;
   border: 1px solid green;
+  font-size: 1rem;
   text-align: center;
 }
 .container .footer {
   color: green;
   border: 1px solid blue;
+  font-size: 24px;
   margin: 10px;
   padding: 10px;
-  font-size: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

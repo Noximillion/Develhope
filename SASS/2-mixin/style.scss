@@ -1,6 +1,7 @@
-@mixin default ($color, $border-color) {
+@mixin default ($color, $border-color, $font-size: 1rem) {
     color: $color;
     border: $border-color;
+    font-size: $font-size;
     @content
 }
 .container {
@@ -25,10 +26,9 @@
         }
     }
     .footer {
-        @include default (green, 1px solid blue) {
+        @include default (green, 1px solid blue, 24px) {
             margin:10px;
             padding:10px;
-            font-size: 24px;
         }
     }
 }
