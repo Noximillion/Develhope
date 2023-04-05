@@ -1,0 +1,85 @@
+@use "sass:color";
+
+@function rem($px) {
+    $value: ($px / 16) + rem;
+    @return $value;
+}
+
+$base: white;
+$Spooky_white: black;
+
+$fs: (
+    "fs-1rem": 1rem, 
+    "fs-2rem": 2rem, 
+    "fs-3rem": 3rem,
+);
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    border: rem(1) solid red;
+    color: green;
+    padding: rem(16);
+    h1 {
+        border-bottom: rem(2) solid blue;
+    }
+    h2 {
+        border: rem(1) solid red;
+        padding: rem(16);
+    }
+    .main {
+        display:flex;
+        article {
+            border: rem(1) solid green;
+            text-align:center;
+            padding: rem(16);
+            &:nth-child(odd){
+                color:blue;
+            }
+            &:nth-child(even){
+                color:red;
+            }
+        }
+    }
+    .flow{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        padding:rem(16);
+        width: 100%;
+        @for $var from 1 to 20 {
+            div:nth-child(#{$var}) {
+                border: rem(1) solid red;
+                width: rem(45);
+                height: rem(45);
+                /* color: color.adjust($Spooky_white, $lightness: +5%);
+                background-color: color.adjust($base, $lightness: -5%); */
+                /* si può impostare il loop per cambiare colore usando color.adjust? */
+                color: lighten($Spooky_white, $var * 5%);
+                background-color: darken($base, $var * 5%);
+                @if $var == 10 {
+                    background-color: blue;
+                    color: red;
+                }
+            }
+            @each $key, $value in $fs {
+                .fs-#{$value} {
+                    font-size: $value;
+                }
+            }
+        }
+    }
+    .footer {
+        border: 1px solid blue;
+        width:100%;
+        article{
+            font-size: rem(24);
+            padding: rem(16);
+            text-align:center;
+        }
+    }
+}
+
+
+

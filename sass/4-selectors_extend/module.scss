@@ -1,0 +1,14 @@
+$color_R: red;
+$color_G: green;
+$color_B: blue;
+
+$Border:1px solid;
+
+$position_center: center;
+
+$remValue: rem;
+
+@function rem($number) {
+    $value: ($number / 16) + $remValue;
+    @return $value;
+}
