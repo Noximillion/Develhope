@@ -1,0 +1,87 @@
+@media screen and (max-width:768px){
+     .navElements{
+        display:none;
+     }
+     .navmenuicon{
+        display:block;
+        float:right;
+     }  
+}
+
+*{
+    font-family:sans-serif;
+    list-style-type:none;
+    text-decoration:none;
+    box-sizing:border-box;
+}
+
+div.hide{
+    display:none;
+}
+
+input[type=checkbox]:checked + div.hide{
+    display: flex;
+} 
+
+
+body{
+    margin:0;
+    padding:0;
+}
+
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    padding:25px 80px;
+    position:relative;
+    align-items:center;
+    background-color:rgb(153, 153, 52);
+}
+a{
+    color:white;
+    padding:1rem;
+}
+
+.title{
+    float:left;
+    padding: 15px 25px;
+    font-size:1,5;
+    color:white;
+}
+
+.navbar .navElements{
+    float:right;
+}
+
+nav ul li{
+    display:inline-block;
+}
+
+nav ul li ul li ul{
+    position:absolute;
+    padding:15px 25px;
+}
+nav ul li ul li ul li{
+    display:block;
+    background-color:yellowgreen;
+}
+
+
+.navbar ul{
+    margin: 0;
+    padding: 0;
+
+}
+
+.button:hover{
+    background-color:green;
+    color:white;
+}
+
+
+img{
+    display:none;
+    height:30px;
+}
