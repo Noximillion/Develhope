@@ -1,8 +1,24 @@
 function nicknameMap(persons) {
+  let nick = ""
   for(let i = 0; i < persons.length; i++){
-    console.log(persons[i].name + "-" + persons[i].age)  
+  nick += (persons[i].name + "-" + persons[i].age + ",");
   }
+  return nick;
 }
+
+
+/*
+ i = 0. condizione = true. 
+ i  = 1. condizione = true.
+ i = 2. condizione = true.
+ i = 3. condizione = true.
+ i = 4. condizione = true.
+ i = 5. condizione = true.
+ i = 6. condizione = true.
+ i = 7. condizione = true.
+ i= 8. condizione = true.
+ i= 9. condizione = false.
+*/
 
 const persons = [
   { name: 'Paul', age: 16 },
@@ -19,4 +35,4 @@ const persons = [
 
 const nicknames = nicknameMap(persons);
 /* console.log(persons); */
-console.log(nicknames); 
+console.log(nicknames.split(",")); 
