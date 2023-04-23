@@ -20,6 +20,10 @@ class Person {
     }
   };
 
+  get firstName() {
+    this.#firstName = firstName
+  }
+
   set lastName(newVal) {
     if(typeof(newVal) == 'string') {
       this.#lastName = newVal;
@@ -29,7 +33,7 @@ class Person {
   }
 
   set age(newVal) {
-    if(typeof(newVal) == Number){
+    if(typeof(newVal) == 'number'){
       this.#age = newVal;
     } else {
       this.#age = 'errore'
@@ -41,10 +45,11 @@ class Person {
 }
 
 const person = new Person('Mario', 'Rossi', 25);
+console.log(person.fullName)
 console.log(person.sayAge());
 
 person.firstName = 'Maria';
 person.lastName = 'Verdi';
 person.age = 30;
+console.log(person.fullName);
 console.log(person.sayAge());
-console.log(person.firstName); 
