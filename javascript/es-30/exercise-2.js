@@ -11,7 +11,10 @@ class Person {
   }
 
   static fromJson(arg) {
-    return JSON.parse(arg)
+    let person = {};
+    let pippo = JSON.parse(arg)
+    person = new Person(pippo.id, pippo.firstName, pippo.lastName, pippo.age)
+    return person
   }
 }
 
