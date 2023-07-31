@@ -3,7 +3,6 @@ dotenv.config();
 import { Request, Response } from "express";
 import { db } from "../db";
 import jwt from "jsonwebtoken"
-import { access } from "fs";
 
 const login = async (req: Request, res: Response) => {
     const {username, password} = req.body;
